@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
-  <display-name>ch03</display-name>
+  <display-name>ch04</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -11,26 +11,4 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.xhtml</welcome-file>
   </welcome-file-list>
-  
-  <!-- 환경 설정 -->
-  <context-param>
-  
-  <description>환경 설정값 실습</description>
-  <param-name>HOST</param-name>
-  <param-value>jdbc:mysql://localhost:3306/studydb</param-value>
-  </context-param>
-  <context-param>
-  
-  <description>환경 설정값 실습</description>
-  <param-name>user</param-name>
-  <param-value>yeong246809</param-value>
-  </context-param>
-  <context-param>
-  
-  <description>환경 설정값 실습</description>
-  <param-name>pass</param-name>
-  <param-value>246809</param-value>
-  </context-param>
-  
-  
 </web-app>
