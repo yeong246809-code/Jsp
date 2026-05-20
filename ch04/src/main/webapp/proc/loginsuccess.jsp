@@ -10,7 +10,12 @@
 		<%
 			// 세션에서 저장한 클라이언트 아이디 가져오기
 			String userid = (String)session.getAttribute("sessUser");
-		
+			
+			if(userid == null){
+				//로그인 하지 않고 접근한 경우
+				response.sendRedirect("./loginform,jsp?login=required");
+				return;
+			}
 		%>
 		
 		
