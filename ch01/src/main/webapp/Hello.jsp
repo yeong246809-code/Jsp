@@ -7,7 +7,7 @@
 <title>Hello</title>
 </head>
 <body>
-	<h3>Hello Wourld</h3>
+	<h3>Hello World</h3>
 	<h3>Hello Jsp</h3>
 	<h3>Hello Busan</h3>
 	

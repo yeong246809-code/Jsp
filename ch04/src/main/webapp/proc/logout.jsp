@@ -4,7 +4,15 @@
 	session.removeAttribute("sessUser");
 	session.invalidate();
 	
+	//쿠키삭제
+	Cookie cookie = new Cookie("auto", null);
+	cookie.setMaxAge(0);
+	response.addCookie(cookie);
+
+	
 	//로그인 폼 이동
 	response.sendRedirect("./loginform.jsp?logout=success");
 
+	
+	
 %>

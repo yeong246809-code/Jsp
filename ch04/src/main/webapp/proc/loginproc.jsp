@@ -1,13 +1,34 @@
+
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 
 	// 전송 데이터 수신
 	String userid = request.getParameter("userid");
 	String pass = request.getParameter("pass");
+	String auto = request.getParameter("auto");
+	
+	//수신 파라미터 콘솔 출력해서 확인해보기
+	//out.println("auto : " + auto);
+	
+	
+	
 	
 	//데이터 베이스 비교처리 생략
 	// abc1234, 1234라고 가정
-	if(userid.equals("abc1234") && pass.equals("1234")){
+	if(pass.equals("1234")){
+		
+		//자동 로그인 처리
+		if(auto != null){
+			Cookie autocookie = new Cookie("auto", userid);
+			autocookie.setMaxAge(60 * 60 * 24 * 7); // 초, 분, 시, 일
+			
+			
+			//클라이언트 전송
+			response.addCookie(autocookie);
+		
+		}
+		
+		
 		//회원 맞으면 세션에 사용자 아이디를 sessUser 이름으로 저장
 		session.setAttribute("sessUser", userid);
 		
