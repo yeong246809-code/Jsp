@@ -28,12 +28,12 @@
     -->
     <!-- 커넥션풀 설정 -->
     <Resource
-    	name="jdbc/studydb"
+    	name="jdbc/board"
     	auth="Container"
     	type="javax.sql.DataSource"
     	driverClassName="com.mysql.cj.jdbc.Driver"
-    	url="jdbc:mysql://127.0.0.1:3306/studydb"
-    	username="yeong246809"
+    	url="jdbc:mysql://127.0.0.1:3306/board"
+    	username="root"
     	password="246809"
     	maxTotal="13"
     	maxIdle="13"
